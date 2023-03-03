@@ -1,0 +1,16 @@
+<.header>
+  Home <%= @home.id %>
+  <:subtitle>This is a home record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/homes/#{@home}/edit"}>
+      <.button>Edit home</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Id"><%= @home.id %></:item>
+  <:item title="Name"><%= @home.name %></:item>
+</.list>
+
+<.back navigate={~p"/homes"}>Back to homes</.back>

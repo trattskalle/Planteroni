@@ -1,0 +1,22 @@
+<.header>
+ <%= @plant.name %>
+  <:subtitle>This is a plant record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/plants/#{@plant}/edit"}>
+      <.button>Edit plant</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<img {[src: @plant.species.image, alt: @plant.species.name ]}/>
+
+<.list>
+  <:item title="Id"><%= @plant.id %></:item>
+  <:item title="Last watered date"><%= @plant.last_watered_date %></:item>
+  <:item title="Name"><%= @plant.name %></:item>
+  <:item title="Species"><%= @plant.species.name %></:item>
+</.list>
+
+
+
+<.back navigate={~p"/plants"}>Back to plants</.back>

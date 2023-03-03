@@ -1,0 +1,18 @@
+<.header>
+  Species <%= @species.id %>
+  <:subtitle>This is a species record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/species/#{@species}/edit"}>
+      <.button>Edit species</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Id"><%= @species.id %></:item>
+  <:item title="Name"><%= @species.name %></:item>
+  <:item title="Image"><%= @species.image %></:item>
+  <:item title="Thirst"><%= @species.thirst %></:item>
+</.list>
+
+<.back navigate={~p"/species"}>Back to species</.back>
