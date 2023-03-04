@@ -5,12 +5,10 @@ defmodule Planteroni.Application do
 
   use Application
 
-  @token Application.compile_env!(:planteroni, :telegram_token)
-
   @impl true
   def start(_type, _args) do
     bot_config = [
-      token: @token,
+      token: Application.fetch_env!(:planteroni, :telegram_token),
       max_bot_concurrency: 1
     ]
 

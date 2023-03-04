@@ -8,8 +8,7 @@
 import Config
 
 config :planteroni,
-  ecto_repos: [Planteroni.Repo],
-  telegram_token: "<enter token here>"
+  ecto_repos: [Planteroni.Repo]
 
 # Configures the endpoint
 config :planteroni, PlanteroniWeb.Endpoint,

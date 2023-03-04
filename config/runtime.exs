@@ -109,3 +109,6 @@ if config_env() == :prod do
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
 end
+
+config :planteroni,
+  telegram_token: System.fetch_env!("TELEGRAM_TOKEN")
