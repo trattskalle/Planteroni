@@ -21,7 +21,12 @@ defmodule Planteroni.PlantsTest do
     end
 
     test "create_species/1 with valid data creates a species" do
-      valid_attrs = %{id: "7488a646-e31f-11e4-aace-600308960662", image: "some image", name: "some name", thirst: 42}
+      valid_attrs = %{
+        id: "7488a646-e31f-11e4-aace-600308960662",
+        image: "some image",
+        name: "some name",
+        thirst: 42
+      }
 
       assert {:ok, %Species{} = species} = Plants.create_species(valid_attrs)
       assert species.id == "7488a646-e31f-11e4-aace-600308960662"
@@ -36,7 +41,13 @@ defmodule Planteroni.PlantsTest do
 
     test "update_species/2 with valid data updates the species" do
       species = species_fixture()
-      update_attrs = %{id: "7488a646-e31f-11e4-aace-600308960668", image: "some updated image", name: "some updated name", thirst: 43}
+
+      update_attrs = %{
+        id: "7488a646-e31f-11e4-aace-600308960668",
+        image: "some updated image",
+        name: "some updated name",
+        thirst: 43
+      }
 
       assert {:ok, %Species{} = species} = Plants.update_species(species, update_attrs)
       assert species.id == "7488a646-e31f-11e4-aace-600308960668"
@@ -81,7 +92,10 @@ defmodule Planteroni.PlantsTest do
     end
 
     test "create_plant/1 with valid data creates a plant" do
-      valid_attrs = %{id: "7488a646-e31f-11e4-aace-600308960662", last_watered_date: ~N[2023-03-02 10:47:00]}
+      valid_attrs = %{
+        id: "7488a646-e31f-11e4-aace-600308960662",
+        last_watered_date: ~N[2023-03-02 10:47:00]
+      }
 
       assert {:ok, %Plant{} = plant} = Plants.create_plant(valid_attrs)
       assert plant.id == "7488a646-e31f-11e4-aace-600308960662"
@@ -94,7 +108,11 @@ defmodule Planteroni.PlantsTest do
 
     test "update_plant/2 with valid data updates the plant" do
       plant = plant_fixture()
-      update_attrs = %{id: "7488a646-e31f-11e4-aace-600308960668", last_watered_date: ~N[2023-03-03 10:47:00]}
+
+      update_attrs = %{
+        id: "7488a646-e31f-11e4-aace-600308960668",
+        last_watered_date: ~N[2023-03-03 10:47:00]
+      }
 
       assert {:ok, %Plant{} = plant} = Plants.update_plant(plant, update_attrs)
       assert plant.id == "7488a646-e31f-11e4-aace-600308960668"

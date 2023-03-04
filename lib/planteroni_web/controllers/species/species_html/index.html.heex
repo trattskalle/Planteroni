@@ -1,5 +1,5 @@
 <.header>
-  Listing Species
+  Species
   <:actions>
     <.link href={~p"/species/new"}>
       <.button>New Species</.button>
@@ -7,10 +7,9 @@
   </:actions>
 </.header>
 
-<.table id="species" rows={@species_collection} row_click={&JS.navigate(~p"/species/#{&1}")}>
-  <:col :let={species} label="Id"><%= species.id %></:col>
+<.table id="species" rows={@species} row_click={&JS.navigate(~p"/species/#{&1}")}>
   <:col :let={species} label="Name"><%= species.name %></:col>
-  <:col :let={species} label="Image"><%= species.image %></:col>
+  <:col :let={species} label="Image"><img {[src: species.image]} width="48" /></:col>
   <:col :let={species} label="Thirst"><%= species.thirst %></:col>
   <:action :let={species}>
     <div class="sr-only">

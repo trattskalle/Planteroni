@@ -3,8 +3,14 @@ defmodule PlanteroniWeb.PlantControllerTest do
 
   import Planteroni.PlantsFixtures
 
-  @create_attrs %{id: "7488a646-e31f-11e4-aace-600308960662", last_watered_date: ~N[2023-03-02 10:47:00]}
-  @update_attrs %{id: "7488a646-e31f-11e4-aace-600308960668", last_watered_date: ~N[2023-03-03 10:47:00]}
+  @create_attrs %{
+    id: "7488a646-e31f-11e4-aace-600308960662",
+    last_watered_date: ~N[2023-03-02 10:47:00]
+  }
+  @update_attrs %{
+    id: "7488a646-e31f-11e4-aace-600308960668",
+    last_watered_date: ~N[2023-03-03 10:47:00]
+  }
   @invalid_attrs %{id: nil, last_watered_date: nil}
 
   describe "index" do

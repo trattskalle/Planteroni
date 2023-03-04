@@ -3,8 +3,18 @@ defmodule PlanteroniWeb.SpeciesControllerTest do
 
   import Planteroni.PlantsFixtures
 
-  @create_attrs %{id: "7488a646-e31f-11e4-aace-600308960662", image: "some image", name: "some name", thirst: 42}
-  @update_attrs %{id: "7488a646-e31f-11e4-aace-600308960668", image: "some updated image", name: "some updated name", thirst: 43}
+  @create_attrs %{
+    id: "7488a646-e31f-11e4-aace-600308960662",
+    image: "some image",
+    name: "some name",
+    thirst: 42
+  }
+  @update_attrs %{
+    id: "7488a646-e31f-11e4-aace-600308960668",
+    image: "some updated image",
+    name: "some updated name",
+    thirst: 43
+  }
   @invalid_attrs %{id: nil, image: nil, name: nil, thirst: nil}
 
   describe "index" do
